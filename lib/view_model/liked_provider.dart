@@ -8,6 +8,7 @@ import 'package:shiv_status_video/remote/model/get_like_videos_data.dart';
 import 'package:shiv_status_video/shared_preferences/liked_prefs.dart';
 import 'package:shiv_status_video/utils/common.dart';
 
+import '../remote/model/get_darshan_photo_response.dart';
 import '../remote/model/get_reels_model.dart';
 
 enum LikeType {
@@ -25,8 +26,8 @@ class LikedProvider extends ChangeNotifier {
   List<GetReelsData> get favVideoList => _favVideoList;
   List<GetReelsData> _favVideoList = [];
 
-  List<GetLikePhotosData> get favImageList => _favImageList;
-  List<GetLikePhotosData> _favImageList = [];
+  List<GetDarshanPhotos> get favImageList => _favImageList;
+  List<GetDarshanPhotos> _favImageList = [];
 
   bool isFavourite(LikeType type, String? id) {
     if (id == null) return false;

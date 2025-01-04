@@ -75,9 +75,9 @@ class _ReelsActionButtonsState extends State<ReelsActionButtons> {
                   });
                 }
                 if (success) {
-                  context.read<LikedProvider>().setToFavourite(LikeType.video, widget.reel);
+                  context.read<LikedProvider>().setToFavourite((widget.isDarshanLike ?? false) ? LikeType.image : LikeType.video, widget.reel);
                 } else {
-                  context.read<LikedProvider>().removeFromFavourite(LikeType.video, widget.reel);
+                  context.read<LikedProvider>().removeFromFavourite((widget.isDarshanLike ?? false) ? LikeType.image : LikeType.video, widget.reel);
                 }
               });
             },
