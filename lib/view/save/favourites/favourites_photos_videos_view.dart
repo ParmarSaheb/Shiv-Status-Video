@@ -3,8 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:shiv_status_video/remote/model/get_like_photos_data.dart';
-import 'package:shiv_status_video/remote/model/get_like_videos_data.dart';
+import 'package:shiv_status_video/remote/model/get_darshan_photo_response.dart';
 import 'package:shiv_status_video/remote/model/get_reels_model.dart';
 import 'package:shiv_status_video/routes.dart';
 import 'package:shiv_status_video/utils/common.dart';
@@ -44,10 +43,6 @@ class _FavouritesPhotosVideosViewState extends State<FavouritesPhotosVideosView>
 
         final mediaList = widget.isPhotos
             ? saveController.favImageList
-                .where((photo) =>
-                    photo.categories != null &&
-                    photo.categories!.any((category) => category.name == 'Mahadev'))
-                .toList()
             : saveController.favVideoList;
 
         // final mediaList = saveController.getLikeVideosData;
@@ -86,9 +81,7 @@ class _FavouritesPhotosVideosViewState extends State<FavouritesPhotosVideosView>
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(15.r),
                     child: CustomImageWidget(
-                        imageUrl: widget.isPhotos
-                            ? (mediaList[innerIndex] as GetLikePhotosData).contentUrl ?? ''
-                            : (mediaList[innerIndex] as GetReelsData).thumbnail ?? '',
+                        imageUrl: widget.isPhotos ? (mediaList[innerIndex] as GetDarshanPhotos).contentUrl ?? '' : (mediaList[innerIndex] as GetReelsData).thumbnail ?? '',
                       height: double.infinity,
                       width: double.infinity,),
                   ),
