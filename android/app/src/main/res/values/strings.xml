@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="facebook_app_ads_id">a5bc2ad2-bd41-4c73-bb45-b9dbf084f925</string>-->
+    <string name="facebook_app_ads_id">a77955ee-3304-4635-be65-81029b0f5201</string>
+    <string name="unity_game_ads_id">YOUR_UNITY_GAME_ID</string>
+    <string name="google_ads_id">ca-app-pub-3940256099942544~3347511713</string>
+</resources>

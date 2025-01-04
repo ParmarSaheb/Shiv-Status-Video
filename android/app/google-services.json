@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900067708150",
+    "project_id": "mahadevstatusvideo-3e4ad",
+    "storage_bucket": "mahadevstatusvideo-3e4ad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900067708150:android:e8e85d43740f3de014f0d7",
+        "android_client_info": {
+          "package_name": "com.example.shiv_status_video"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6rJaQaBFq_i9z8Fx-k2Sm0o80XN6NFqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
