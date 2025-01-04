@@ -8,6 +8,8 @@ import 'package:shiv_status_video/remote/model/get_like_videos_data.dart';
 import 'package:shiv_status_video/shared_preferences/liked_prefs.dart';
 import 'package:shiv_status_video/utils/common.dart';
 
+import '../remote/model/get_reels_model.dart';
+
 enum LikeType {
   video,
   image,
@@ -20,8 +22,8 @@ class LikedProvider extends ChangeNotifier {
   /// FAVOURITES
   ///
 
-  List<GetLikeVideosData> get favVideoList => _favVideoList;
-  List<GetLikeVideosData> _favVideoList = [];
+  List<GetReelsData> get favVideoList => _favVideoList;
+  List<GetReelsData> _favVideoList = [];
 
   List<GetLikePhotosData> get favImageList => _favImageList;
   List<GetLikePhotosData> _favImageList = [];
@@ -60,7 +62,7 @@ class LikedProvider extends ChangeNotifier {
         } catch (_) {}
         await getFavourites(type);
       } else {
-        favList.add(jsonEncode(data));
+        favList.add(data);
         try {
           Common.showToast(MyApp.navigatorKey.currentContext!, "Added to favourites.!");
         } catch (_) {}

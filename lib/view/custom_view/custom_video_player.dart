@@ -82,7 +82,7 @@ class _CustomVidPlayerState extends State<CustomVidPlayer> {
       _videoPlayerController = VideoPlayerController.networkUrl(Uri.parse(widget.videoPath));
       _videoPlayerController.setLooping(widget.looping);
 
-      _videoPlayerController.initialize().then((_) {
+      _videoPlayerController.initialize().then((_) async {
         setState(() {});
         _chewieController = ChewieController(
           videoPlayerController: _videoPlayerController,
